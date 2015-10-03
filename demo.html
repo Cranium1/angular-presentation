@@ -1,20 +1,12 @@
-<html ng-app="BlogApp">
+<html ng-app="DemoApp">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-	<script src="markdown.min.js" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+	<script src="markdown.min.js"></script>
 	<script src="app.js"></script>
 </head>
 
-<body ng-controller="PreviewController">
-	<h1>Enter Markdown</h1>
-	<textarea rows="10" cols="100" ng-model="input"></textarea>
-
-	<h1>Rendered Markdown</h1>
-		<div ng-bind-html="output | html"></div>
-	</div>
-
-	<h1>HTML Text</h1>
-		<div ng-bind="output"></div>
-	</div>
+<body ng-view>
 </body>
+
 </html>
